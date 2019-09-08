@@ -25,7 +25,11 @@ end
 def get_english_meaning(file = 'lib/emoticons.yml', emoticons)
   # code goes here
   west_emo = load_library
-  
+  if jap_emo["get_emoticon"].include?(emoticons)
+    
+  else
+    "Sorry, that emoticon was not found"
+  end
 end
 
 load_library
