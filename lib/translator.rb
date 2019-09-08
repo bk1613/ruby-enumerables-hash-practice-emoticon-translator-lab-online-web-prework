@@ -18,7 +18,7 @@ def get_japanese_emoticon(file = 'lib/emoticons.yml', emoticons)
   
 end
 
-def get_english_meaning
+def get_english_meaning(file = 'lib/emoticons.yml', emoticons)
   # code goes here
   west_emo = load_library
   
