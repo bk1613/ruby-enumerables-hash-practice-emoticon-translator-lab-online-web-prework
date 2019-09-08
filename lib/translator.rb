@@ -12,21 +12,21 @@ def load_library(file = 'lib/emoticons.yml')
   puts emo_library
 end
 
-def get_japanese_emoticon(file = 'lib/emoticons.yml', emoticons)
+def get_japanese_emoticon(file = 'lib/emoticons.yml', emoticon)
   # code goes here
   jap_emo = load_library
-  if jap_emo["get_emoticon"].include?(emoticons)
+  if jap_emo["get_emoticon"].include?(emoticon)
     
   else
     "Sorry, that emoticon was not found"
   end
 end
 
-def get_english_meaning(file = 'lib/emoticons.yml', emoticons)
+def get_english_meaning(file = 'lib/emoticons.yml', emoticon)
   # code goes here
   west_emo = load_library
-  if west_emo["get_meaning"].include?(emoticons)
-    west_emo["get_meaning"]
+  if west_emo["get_meaning"].include?(emoticon)
+    west_emo["get_meaning"][emoticon]
   else
     "Sorry, that emoticon was not found"
   end
