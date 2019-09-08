@@ -3,7 +3,7 @@ require "yaml"
 
 def load_library(file = 'lib/emoticons.yml')
   # code goes here
-  emo_library = {"get_meaning" = [], "get_emoticon" = []}
+  emo_library = {"get_meaning" = {}, "get_emoticon" = {}}
   emos = YAML.load_file(file)
   emos.each do |meaning, array|
     emo_library["get_meaning"][array[0]] = meaning
