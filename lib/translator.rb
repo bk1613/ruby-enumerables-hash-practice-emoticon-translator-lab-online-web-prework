@@ -14,7 +14,7 @@ end
 
 def get_japanese_emoticon(file = 'lib/emoticons.yml', emoticon)
   # code goes here
-  jap_emo = load_library
+  jap_emo = load_library(file)
   if jap_emo["get_emoticon"].include?(emoticon)
     jap_emo["get_emoticon"][emoticon]
   else
@@ -24,7 +24,7 @@ end
 
 def get_english_meaning(file = 'lib/emoticons.yml', emoticon)
   # code goes here
-  west_emo = load_library
+  west_emo = load_library(file)
   if west_emo["get_meaning"].include?(emoticon)
     west_emo["get_meaning"][emoticon]
   else
